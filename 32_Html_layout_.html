@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Template</title>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    /* style the header  */
+    header{
+      background-color: #666;
+      padding: 30px;
+      text-align: center;
+      font-size: 35px;
+      color: white;
+    }
+    /* create two columns /box that flots next to each other  */
+    nav{
+      float: left;
+      width: 30%;
+      height: 300px;
+      background-color: #ccc;
+      padding: 20px;
+
+    }
+    /* Style the list inside the menue */
+    nav ul{
+      list-style-type: none;
+      padding: 0;
+
+    }
+    article{
+      float: left;
+      padding: 20px;
+      width: 70%;
+      background-color:#f1f1;
+      height: 300px;
+    }
+    /* clear float  after the  columns  */
+    section::after{
+      content:"";
+      display: table;
+      clear: both;
+    }
+    /* style of footer  */
+    footer {
+      background-color: #777;
+      text-align: center;
+      padding: 10px;
+    font-size: 35px;
+    color: white;
+    }
+    @media(max-width:600px){
+      nav,article{
+      width: 100%;
+      height: auto;
+    }
+}
+</style>
+</head>
+<body>
+ <h2>CSS Layout Float </h2>
+  <p>In this example, we have created a header two columns /boxes and a footer . On smaller screens the columns will
+    sracks on top of each other . 
+    
+    </p>
+    <p>Resize the browser window to see the responsive effect (you will lwarn more about this in our next chapter -HTML responsive.)
+  </p>
+
+<header>
+  <h2>Cities </h2>
+
+</header>
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Amaravati</a></li>
+      <li><a href="#">Raipur</a></li>
+      <li><a href="#">Panji</a></li>
+    </ul>
+  </nav>
+  <article>
+    <h1>Amaravati</h1>
+    <p>Amaravati is the capital of the Indian state of Andhra pardesh.It is located at right bank of 
+      the river Krishna in Guntur district.  
+      
+    </p>
+    <h3>Amaravathi Village ,a historical and Religious Hub:</h3>
+    <p>Older Than Time: Predating even Dharanikota, this village was a flourishing Buddhist center during the Mauryan Empire. The Amaravati Maha Stupa, one of the earliest and largest brick stupas in India, stands as a testament to its rich past</p>
+  </article>
+</section>
+<footer>
+  <p>Footer </p>
+</footer>
+</body>
+</html>
